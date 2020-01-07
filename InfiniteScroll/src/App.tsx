@@ -1,7 +1,7 @@
 import React, { FC, useState, useEffect, } from 'react';
 import axios from 'axios';
 import { debounce } from 'lodash';
-import ImageCard from './ImageCard';
+import ImageCard from './components/ImageCard';
 
 interface IImage {
   albumId: number;
@@ -11,7 +11,7 @@ interface IImage {
   thumbnailUrl: string;
 }
 
-const InfiniteScroll: FC = () => {
+const App: FC = () => {
   const [count, setCount] = useState(0);
   const [data, setData] = useState<IImage[]>([]);
 
@@ -40,4 +40,4 @@ const scrollListener = (setCount: React.Dispatch<React.SetStateAction<number>>) 
   }
 }, 200)
 
-export default InfiniteScroll;
+export default App;
