@@ -1,1 +1,1 @@
-# practice-app
+# practice-project
